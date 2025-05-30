@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Recursos - Ejemplo 07</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f3ff;
+            margin: 20px;
+        }
+
+        .contenedor {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 2px solid #7eb0db;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #2c5777;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border: 1px solid #7eb0db;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #7eb0db;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4a90e2;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f0f7ff;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #e6f3ff;
+        }
+
+        .tendencia-positiva {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .tendencia-negativa {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .volver {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .boton-volver {
+            background-color: #4a90e2;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .boton-volver:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Análisis de Recursos</h1>
+        
+        <marquee behavior="scroll" direction="left" scrollamount="5" bgcolor="#4a90e2" style="color: white; padding: 12px; margin-bottom: 20px; border-radius: 5px;">
+            📊 Reporte actualizado al 29 de mayo de 2025 - Monitores muestran el mayor crecimiento este trimestre
+        </marquee>
+
+        <table>
+            <tr>
+                <th>Recurso</th>
+                <th>Mes 1</th>
+                <th>Mes 2</th>
+                <th>Mes 3</th>
+                <th>Tendencia</th>
+            </tr>
+            <tr>
+                <td>Discos Duros</td>
+                <td>$23,000</td>
+                <td>$27,200</td>
+                <td>$26,000</td>
+                <td class="tendencia-negativa">↓ 4.4%</td>
+            </tr>
+            <tr>
+                <td>CPU</td>
+                <td>$73,000</td>
+                <td>$67,300</td>
+                <td>$51,000</td>
+                <td class="tendencia-negativa">↓ 24.2%</td>
+            </tr>
+            <tr>
+                <td>Monitores</td>
+                <td>$53,000</td>
+                <td>$72,000</td>
+                <td>$88,000</td>
+                <td class="tendencia-positiva">↑ 22.2%</td>
+            </tr>
+        </table>
+
+        <div class="volver">
+            <a href="index.html" class="boton-volver">Volver al índice</a>
+        </div>
+    </div>
+</body>
+</html>

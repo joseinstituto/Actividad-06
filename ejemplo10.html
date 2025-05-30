@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronóstico Extendido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e8f6f3;
+            margin: 20px;
+        }
+        .contenedor {
+            background-color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #48c9b0;
+        }
+        marquee {
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .boton-volver {
+            background-color: #1abc9c;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #16a085;
+            text-align: center;
+        }
+        .fecha {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .tabla-espaciada {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 15px;
+            margin: 20px 0;
+        }
+        .tabla-espaciada th {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .tabla-espaciada td {
+            background-color: #f0fcf9;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #48c9b0;
+            border-radius: 8px;
+        }
+        .tabla-espaciada td:hover {
+            background-color: #e8f6f3;
+        }
+        .temperatura {
+            font-size: 24px;
+            color: #16a085;
+            margin: 10px 0;
+        }
+        .clima-info {
+            color: #666;
+            margin: 5px 0;
+        }
+        .volver {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <a href="index.html" class="boton-volver">⬅️ Volver al índice</a>
+        
+        <marquee>☀️ Condiciones mayormente soleadas | 🌡️ Temperaturas agradables | 💨 Vientos moderados</marquee>
+        
+        <h1>📅 Pronóstico Extendido</h1>
+        <div class="fecha">Lima, Perú - 29 de mayo de 2025</div>
+        
+        <table class="tabla-espaciada">
+            <thead>
+                <tr>
+                    <th>Hoy</th>
+                    <th>Mañana</th>
+                    <th>Miércoles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>☀️<br>Soleado</td>
+                    <td>🌤️<br>Mayormente soleado</td>
+                    <td>⛅<br>Parcialmente nublado</td>
+                </tr>
+                <tr>
+                    <td class="temperatura">19°C<br><span class="clima-info">Temperatura máxima</span></td>
+                    <td class="temperatura">17°C<br><span class="clima-info">Temperatura máxima</span></td>
+                    <td class="temperatura">12°C<br><span class="clima-info">Temperatura máxima</span></td>
+                </tr>
+                <tr>
+                    <td class="clima-info">🌪️ Este 13 km/h<br>Vientos moderados</td>
+                    <td class="clima-info">🌪️ Este 11 km/h<br>Vientos suaves</td>
+                    <td class="clima-info">🌪️ Sur 16 km/h<br>Vientos moderados</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

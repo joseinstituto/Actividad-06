@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pronóstico del Tiempo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0ed;
+            margin: 20px;
+        }
+        .contenedor {
+            background-color: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #ff8b7f;
+        }
+        marquee {
+            background-color: #ff7f50;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .boton-volver {
+            background-color: #ff7f50;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 3px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #ff7f50;
+            text-align: center;
+        }
+        .fecha {
+            text-align: center;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .pronostico {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .clima-tarjeta {
+            background-color: #fff8f7;
+            border: 1px solid #ffcec7;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .clima-tarjeta h2 {
+            color: #ff7f50;
+            margin: 10px 0;
+        }
+        .temperatura {
+            font-size: 24px;
+            color: #ff7f50;
+            margin: 10px 0;
+        }
+        .detalles {
+            color: #666;
+            margin: 10px 0;
+        }
+        .alerta {
+            background-color: #fff8f7;
+            border: 1px solid #ffcec7;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            text-align: center;
+            color: #ff7f50;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <a href="index.html" class="boton-volver">⬅️ Volver al índice</a>
+        
+        <marquee>🌤️ Temperaturas moderadas | 💨 Vientos del este | ☀️ Condiciones mayormente soleadas</marquee>
+        
+        <h1>⛅ Pronóstico del Tiempo</h1>
+        <div class="fecha">Chimbote, Perú - 29 de mayo de 2025</div>
+        
+        <div class="pronostico">
+            <div class="clima-tarjeta">
+                <h2>Hoy</h2>
+                <div>☀️</div>
+                <div class="temperatura">19°C</div>
+                <div>Soleado</div>
+                <div class="detalles">
+                    <div>🌪️ 13 km/h Este</div>
+                    <div>💧 65% Humedad</div>
+                </div>
+            </div>
+            
+            <div class="clima-tarjeta">
+                <h2>Mañana</h2>
+                <div>🌤️</div>
+                <div class="temperatura">17°C</div>
+                <div>Mayormente soleado</div>
+                <div class="detalles">
+                    <div>🌪️ 11 km/h Este</div>
+                    <div>💧 70% Humedad</div>
+                </div>
+            </div>
+            
+            <div class="clima-tarjeta">
+                <h2>Miércoles</h2>
+                <div>⛅</div>
+                <div class="temperatura">12°C</div>
+                <div>Parcialmente nublado</div>
+                <div class="detalles">
+                    <div>🌪️ 16 km/h Sur</div>
+                    <div>💧 75% Humedad</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="alerta">
+            ℹ️ Información: Se espera un descenso gradual de la temperatura durante la semana.
+        </div>
+    </div>
+</body>
+</html>

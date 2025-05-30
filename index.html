@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Práctica 06 - Ejercicios">
+    <meta name="author" content="José Javier Jaramillo Bravo">
+    <title>Práctica 06 </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #2568cc;
+            --secondary-color: #0dcaf0;
+            --text-color: #2c3e50;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        body {
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        .nav-link {
+            border-radius: 8px;
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: var(--primary-color);
+            color: white !important;
+            transform: translateX(10px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .header-section {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+        }
+
+        .list-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 0.9em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .list-group-item {
+            border: none;
+            margin-bottom: 8px;
+            border-radius: 10px !important;
+            transition: all 0.3s ease;
+        }
+
+        .list-group-item:hover {
+            transform: translateX(5px);
+            background-color: #f8f9fa;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .name-card {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .name-card h3 {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="animate__animated animate__fadeIn">
+    <div class="container py-5">
+        <div class="header-section text-center text-white mb-5 animate__animated animate__fadeInDown">
+            <h1 class="display-4 fw-bold mb-3">
+                Página Principal
+            </h1>
+            <h2 class="h3 fw-light">Actividad 06 </h2>
+            <div class="mt-4">
+                <span class="badge bg-light text-primary px-3 py-2 shadow-sm">
+                    <i class="bi bi-calendar3 me-2"></i>
+                    28 de mayo de 2025
+                </span>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card animate__animated animate__fadeInUp">
+                    <div class="card-header bg-primary text-white p-3 d-flex align-items-center">
+                        <i class="bi bi-list-check me-2 fs-4"></i>
+                        <span class="fs-5 fw-semibold">Lista de Ejercicios</span>
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="list-group">
+                            <a href="ejemplo01.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">1</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla básica</h5>
+                                    <small class="text-muted">Estructura fundamental de tablas HTML</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo02.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">2</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con bordes</h5>
+                                    <small class="text-muted">Implementación de bordes en tablas</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>                            </a>
+                            <a href="ejemplo03.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">3</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con títulos</h5>
+                                    <small class="text-muted">Uso de títulos en tablas HTML</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo04.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">4</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con caption</h5>
+                                    <small class="text-muted">Implementación de leyendas en tablas</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo05.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">5</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla del clima</h5>
+                                    <small class="text-muted">Información meteorológica en formato tabla</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo06.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">6</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con imágenes</h5>
+                                    <small class="text-muted">Integración de imágenes en tablas</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo07.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">7</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con celdas combinadas</h5>
+                                    <small class="text-muted">Uso de colspan y rowspan</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo08.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">8</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con thead, tbody y tfoot</h5>
+                                    <small class="text-muted">Estructura semántica de tablas</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo09.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">9</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con estilos CSS</h5>
+                                    <small class="text-muted">Aplicación de estilos personalizados</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo10.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">10</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con padding</h5>
+                                    <small class="text-muted">Control de espaciado interno</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo11.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">11</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con bordes colapsados</h5>
+                                    <small class="text-muted">Gestión de bordes en tablas</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo12.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">12</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con caption</h5>
+                                    <small class="text-muted">Títulos y descripciones de tablas</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo13.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">13</span>
+                                <div>
+                                    <h5 class="mb-1">Tabla con colores</h5>
+                                    <small class="text-muted">Personalización de colores en tablas</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                            <a href="ejemplo14.html" class="list-group-item list-group-item-action d-flex align-items-center p-3">
+                                <span class="list-number">14</span>
+                                <div>
+                                    <h5 class="mb-1">Página Queen</h5>
+                                    <small class="text-muted">Ejemplo completo con tablas e imágenes</small>
+                                </div>
+                                <i class="bi bi-chevron-right ms-auto"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-light p-3 text-center">
+                        <small class="text-muted">
+                            <i class="bi bi-info-circle me-1"></i>
+                            Haz clic en cualquier ejercicio para verlo
+                        </small>
+                    </div>
+                </div>
+
+                <div class="text-center mt-5 animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="name-card floating">
+                        <h3 class="m-0 text-white fw-bold">
+                            <i class="bi bi-person-badge me-2"></i>
+                            José Javier Jaramillo Bravo
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

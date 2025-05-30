@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Tabla con Caption - Ejemplo 04</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fce4ec;
+            margin: 20px;
+        }        .contenedor {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border: 2px solid #f06292;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: #c2185b;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .titulo-tabla {
+            background-color: #4f4f4f;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .caption-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            pointer-events: none;
+        }
+
+        .caption-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .caption-subtitle {
+            font-size: 1em;
+            opacity: 0.9;
+        }        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border: 1px solid #f06292;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #f06292;
+            text-align: left;
+        }
+
+        th {
+            background-color: #ec407a;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fef0f4;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
+        }
+
+        tr:hover {
+            background-color: #fce4ec;
+        }
+
+        .volver {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .boton-volver {
+            background-color: #ec407a;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .boton-volver:hover {
+            background-color: #d81b60;
+        }
+
+        marquee {
+            color: white;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .marquee-container {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            padding: 12px;
+            border-radius: 8px;
+            margin: 25px 0;
+            overflow: hidden;
+        }
+
+        .marquee {
+            color: white;
+            white-space: nowrap;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .btn-back {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            padding: 12px 25px;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-back:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            color: white;
+        }
+
+        .stat-badge {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>    <div class="contenedor">
+        <h1>Ranking Mundial de Población</h1>
+        <div class="titulo-tabla">
+            Datos de población por país - 2025
+        </div>
+
+        <marquee behavior="scroll" direction="left" scrollamount="5" bgcolor="#ec407a">
+            📊 Estadísticas de población por región - Actualizado al 29 de mayo de 2025
+        </marquee>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>País</th>
+                    <th>Capital</th>
+                    <th>Población</th>
+                    <th>Densidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>China</td>
+                    <td>Pekín</td>
+                    <td>1,400 millones</td>
+                    <td>145 hab/km²</td>
+                </tr>
+                <tr>
+                    <td>India</td>
+                    <td>Nueva Delhi</td>
+                    <td>1,380 millones</td>
+                    <td>464 hab/km²</td>
+                </tr>                <tr>
+                    <td>Estados Unidos</td>
+                    <td>Washington D.C.</td>
+                    <td>331 millones</td>
+                    <td>36 hab/km²</td>
+                </tr>
+                <tr>
+                    <td>Indonesia</td>
+                    <td>Yakarta</td>
+                    <td>270 millones</td>
+                    <td>151 hab/km²</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="volver">
+            <a href="index.html" class="boton-volver">Volver al índice</a>
+        </div>
+    </div>
+</body>
+</html>
